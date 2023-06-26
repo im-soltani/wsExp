@@ -2,7 +2,7 @@ const Datee=(req,res,next)=>{
    let date=new Date()
     let d=date.getDay()
     let h=date.getHours()
-    if(!(d>=3 && d<=5 && h>=9 && h<=18)){
+    if(!(d>=3 && d<=5 && h>=9 && h<=23)){
         res.send("hors service !")
     }
 next()

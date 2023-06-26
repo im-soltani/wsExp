@@ -4,6 +4,7 @@ const Datee=require("./middlewear/Date")
 
 const app=express()
 app.use(express.json())
+
 app.use(Datee)
 app.get("/home",(req,res)=>{
     res.send("hello world")
@@ -15,7 +16,6 @@ app.get("/aboutt",(req,res)=>{
 
     res.sendFile(__dirname+"/public/about.html")
 })
-console.log(__dirname,'testttt')
 app.use("/users",require("./routes/users"))
 
 const port=5000
